@@ -8,7 +8,7 @@ export default function StartPage() {
                 Welcome to the Property Management Tool (PMT)
             </h1>
             <h3>
-                A place to store important documents, track maintenance requests, etc to help <em>you</em> manage your property
+                A place to store important documents, track maintenance requests, etc. to help <em>you</em> manage your property
             </h3>
             <div>
                 <div id='circle'>

@@ -21,6 +21,9 @@
   grid-row: 1/2;
   background-color: lavender;
  
+  /* display: flex;
+  align-items: flex-end;
+  justify-content: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: end;
@@ -134,6 +137,7 @@
   align-items: center;
   column-gap: 50px;
 }
+  /* Buttons are disabled until forms are set up */
   .StartPage > #buttons > div > a{
     border: 2px inset orchid;
     border-radius: 10px;
@@ -145,6 +149,60 @@
     cursor: pointer;
     background-color: orchid;
   }
+
+
+/* Home Page */
+.HomePage{
+  grid-row: 2/3;
+  background-color: rgb(61, 52, 80);
+  font-family: Courier Prime;
+  color: azure;
+
+  display: flex;
+  justify-content: center;
+}
+.HomePage > main{
+  width: 50vw;
+  margin: 20px 0px;
+  padding: 20px 40px;
+  border: 2px solid black;
+
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  align-items: center;
+  justify-items: center;
+  row-gap: 50px;
+}
+  .HomePage > main > h1{
+    grid-row: 1/2;
+    text-decoration: underline;
+  }
+  .HomePage > main > ul{
+    grid-row: 2/3;
+    align-self: baseline;
+    overflow-y: scroll;
+
+    display: grid;
+    row-gap: 50px;
+    justify-items: start;
+  }
+    .HomePage > main > ul > li::marker{
+      content: '📍 '
+    }
+    .HomePage > main > ul > li{
+      margin-left: 40px;
+      line-height: 0.35in;
+      font-size: 18px;
+    }
+  .HomePage > main > a{
+    font-size: 20px;
+    background-color: azure;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 2px darkslateblue solid;
+    box-shadow: 0px 0px 10px white;
+  }
+
 
 /* App-Footer Component */
 .AppFooter{
