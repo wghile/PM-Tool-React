@@ -12,12 +12,11 @@ function App() {
   return (
     <div className='App'>
       <AppNav />
-      <StartPage />
       <Routes>
-        {/* <Route to='/' element={<StartPage />} /> */}
-        <Route to='/login' element={<LogIn />} />
-        <Route to='/signup' element={<SignUp />} />
-        <Route to='/home' element={<HomePage />} />
+        <Route path='/' element={<StartPage />} />
+        <Route path='/login' element={<LogIn />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/home' element={<HomePage />} />
       </Routes>
       <AppFooter />
     </div>

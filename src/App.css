@@ -20,14 +20,26 @@
 .AppNav{
   grid-row: 1/2;
   background-color: lavender;
+ 
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: end;
-  justify-content: center;
 }
 .AppNav > h1{
+  grid-column: 2/3;
+  justify-self: center;
   font-family: Dancing Script;
   color: rgba(73, 3, 104, 0.994);
   letter-spacing: 0.04in;
+}
+.AppNav > h4{
+  grid-column: 3/4;
+  justify-self: end;
+  align-self: center;
+  padding-right: 50px;
+  font-family: Dancing Script;
+  color: rgba(73, 3, 104, 0.994);
+  text-transform: uppercase;
 }
 
 /* Start Page */
