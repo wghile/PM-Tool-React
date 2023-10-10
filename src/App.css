@@ -1,42 +1,153 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Courier+Prime:regular,italic,700,700italic);
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* App */
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 1fr 50px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* App-Nav Component */
+.AppNav{
+  grid-row: 1/2;
+  background-color: lavender;
+  display: grid;
+  align-items: end;
+  justify-content: center;
+}
+.AppNav > h1{
+  font-family: Dancing Script;
+  color: rgba(73, 3, 104, 0.994);
+  letter-spacing: 0.04in;
+}
+
+/* Start Page */
+.StartPage{
+  grid-row: 2/3;
+  background-color: rgb(61, 52, 80);
+  font-family: Courier Prime;
+  color: azure;
+  overflow: scroll;
+
+  display: grid;
+  grid-template-rows: 1fr 200px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px 0px;
+}
+.StartPage > main{
+  grid-row: 1/2;
+  width: 60vw;
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-rows: 50px 80px 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 10px 0px;
+}
+  .StartPage > main > h1{
+    grid-row: 1/2;
+    font-weight: normal;
+    font-size: 25px;
   }
-  to {
-    transform: rotate(360deg);
+  .StartPage > main > h3{
+    grid-row: 2/3;
+    width: 50vw;
+    font-weight: normal;
+    text-align: center;
+    line-height: 0.3in;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .StartPage > main > div{
+    grid-row: 3/4;
+    margin-top: 40px;
   }
-}
+  .StartPage > main > div > #circle{
+    padding-top: 50px;
+    border: 2px dashed black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  .StartPage > main > div > #circle > #house{
+    position: relative;
+      left: 55px;
+      bottom: 90px;
+    width: 80px;
+  }
+  .StartPage > main > div > #circle > #repair{
+    position: relative;
+      left: 88px;
+      bottom: 40px;
+    width: 50px;
+  }
+  .StartPage > main > div > #circle > #rent{
+    position: relative;
+      right: 5px;
+      top: 70px;
+    width: 65px;
+  }
+  .StartPage > main > div > #circle > #doc{
+    position: relative;
+      left: 10px;
+    width: 50px;
+  }
+  .StartPage > main > div > #circle > #budget{
+    position: relative;
+      right: 80px;
+      bottom: 95px;
+    width: 60px;
+  }
+.StartPage > #buttons{
+  grid-row: 2/3;
+  width: 60vw;
 
-.card {
-  padding: 2em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 40px;
+  justify-content: center;
 }
+.StartPage > #buttons > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 50px;
+}
+  .StartPage > #buttons > div > a{
+    border: 2px inset orchid;
+    border-radius: 10px;
+    background-color: rgb(128, 48, 125);
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .StartPage > #buttons > div > a:hover{
+    cursor: pointer;
+    background-color: orchid;
+  }
 
-.read-the-docs {
-  color: #888;
+/* App-Footer Component */
+.AppFooter{
+  grid-row: 3/4;
+  background-color: lavender;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.AppFooter > p{
+  font-family: Inconsolata;
+  font-size: 20px;
+  letter-spacing: 0.02in;
+  color: rgba(73, 3, 104, 0.994);
+}
+.AppFooter > p > span{
+  font-size: 25px;
 }
