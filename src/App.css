@@ -307,7 +307,7 @@
 
   display: grid;
   grid-template-rows: 20px 50px 1fr;
-  gap: 20px 0px;
+  gap: 10px 0px;
 }
 .Dashboard > header{
   grid-row: 1/2;
@@ -331,11 +331,12 @@
     }
 .Dashboard > nav{
   grid-row: 2/3;
+  font-family: Cutive Mono;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 22px;
 }
   .Dashboard > nav > .slash{
     color: azure;
@@ -343,6 +344,7 @@
   }
   .Dashboard > nav > a{
     text-transform: uppercase;
+    font-size: 18px;
   }
 
   /* Menu */

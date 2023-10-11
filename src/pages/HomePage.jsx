@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import NewProp from '../components/NewProp'
-import { Link } from 'react-router-dom'
+import EditProp from '../components/EditProp'
+import DeletePrompt from '../components/DeletePrompt'
 
 export default function HomePage() {
 
@@ -15,6 +17,16 @@ export default function HomePage() {
               <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
                 25 WillyWonka Way, Wonkaworld, Great Britain
               </Link>
+              <Popup trigger={<button>Edit</button>} modal nested>
+                {close => (
+                  <div className='modal'>
+                    <button id='close' onClick={() => close()}>
+                      X
+                    </button>
+                    <EditProp close={close}/>
+                  </div>
+                )}
+              </Popup>
             </li>
             <li>
               <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
