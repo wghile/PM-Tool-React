@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import StartPage from './pages/StartPage'
-import NewPropPage from './components/NewProp'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
 import AppFooter from './components/App-Footer'
@@ -19,7 +18,6 @@ function App() {
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/home' element={<HomePage />} />
-        <Route path='/newproperty' element={<NewPropPage />} />
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
       <AppFooter />

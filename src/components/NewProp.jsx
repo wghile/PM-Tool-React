@@ -15,7 +15,7 @@ export default function NewProp({close}) {
           Zip Code: <input type='number'/>
         </div>
         <div id='state'>
-          State: <input type='text' placeholder='if applicable'/>
+          State: <input type='text'/>
         </div>
         <div id='country'>
           Country: <input type='text'/>

@@ -4,8 +4,11 @@ Front End
 
 Built with React + Vite, JavaScript, HTML, CSS
 
+## Features I'd like to Add
+
+- User Authentication
+
 ## Resources
 
--Pop Ups:
-https://www.geeksforgeeks.org/how-to-create-popup-box-in-reactjs/
-https://www.npmjs.com/package/reactjs-popup
+-Pop Ups and Menu: https://www.geeksforgeeks.org/how-to-create-popup-box-in-reactjs/, https://www.npmjs.com/package/reactjs-popup
+-Overriding Inline Styling: https://stackoverflow.com/questions/16813220/how-can-i-override-inline-styles-with-external-css

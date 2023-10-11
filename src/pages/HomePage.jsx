@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import NewProp from '../components/NewProp'
+import { Link } from 'react-router-dom'
 
 export default function HomePage() {
-
-  const [display, setDisplay] = useState(false)
 
   return (
     <div className='HomePage'>
@@ -15,17 +12,16 @@ export default function HomePage() {
         </h1>
         <ul>
             <li>
+              <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
                 25 WillyWonka Way, Wonkaworld, Great Britain
+              </Link>
             </li>
             <li>
-              Test
+              <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
+                Test
+              </Link>
             </li>
         </ul>
-        {/* <Link to='/newproperty' style={{textDecoration: 'none', color: 'darkslateblue'}}> */}
-        {/* </Link> */}
-        {/* <button onClick={() => setDisplay(true)}>
-          + New Property
-        </button> */}
         <Popup trigger={<button>+ New Property</button>} modal nested>
           {close => (
             <div className='modal'>

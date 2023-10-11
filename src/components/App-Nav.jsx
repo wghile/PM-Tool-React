@@ -8,11 +8,6 @@ export default function AppNav() {
             PMT
           </Link>
         </h1>
-        <h4>
-          <Link to='/' style={{textDecoration: 'none'}}>
-            Log Out
-          </Link>
-        </h4>
     </div>
   )
 }
