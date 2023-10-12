@@ -17,6 +17,12 @@ export default function HomePage() {
     }), []
   })
 
+  // const addNewProperty = () => {
+  //   axios.post(BASE_URL), newProperty.then((response) => {
+  //     setList(response.data)
+  //   })
+  // }
+
   return (
     <div className='HomePage'>
       <main>
@@ -43,16 +49,6 @@ export default function HomePage() {
               </li>
             )
           })}
-            {/* <li>
-              <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
-                25 WillyWonka Way, Wonkaworld, Great Britain
-              </Link> */}
-            {/* </li> */}
-            {/* <li>
-              <Link to='/dashboard' style={{textDecoration: 'none', color: 'gray'}}>
-                Test
-              </Link>
-            </li> */}
         </ul>
         <Popup trigger={<button>+ New Property</button>} modal nested>
           {close => (
@@ -60,7 +56,7 @@ export default function HomePage() {
               <button id='close' onClick={() => close()}>
                 X
               </button>
-              <NewProp close={close}/>
+              <NewProp close={close} />
             </div>
           )}
         </Popup>

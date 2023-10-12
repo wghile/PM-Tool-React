@@ -18,7 +18,7 @@ export default function EditProp({close, property}) {
   useEffect(() => {
     axios.get(`${BASE_URL}/${property._id}`).then((response) => {
       // setPropertyData(response.data)
-      console.log(response.data)
+      // console.log(response.data)
     }), []
   })
 
@@ -41,7 +41,7 @@ export default function EditProp({close, property}) {
       <h1>
         Edit Property
       </h1>
-      <form onSubmit={updateFunction}>
+      <form>
         <div id='street'>
           Street Address: <input type='text' defaultValue={property.address} onChange={(evt) => setAddress(evt.target.value)}/>
         </div>

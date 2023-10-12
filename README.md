@@ -1,14 +1,20 @@
 ## About
 
-Front End
+Property Management Tool to help property owners organize and store all documents and track maintenance requests. This repo is for the front end.
+
+[BackEnd](https://github.com/wghile/PM-Tool-Express)
 
 Built with React + Vite, JavaScript, HTML, CSS
 
 ## Features for Future Enhancements
 
 - User Authentication
+- Finish designing all components
+- Use API to display property info in dashboard
 
 ## Challenges
+
+- Could not figure out how to connect front end to back end so CRUD operations are not working ☹️
 
 ## Resources
 
