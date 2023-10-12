@@ -14,7 +14,7 @@ Built with React + Vite, JavaScript, HTML, CSS
 
 ## Challenges
 
-- Could not figure out how to connect front end to back end so CRUD operations are not working ☹️
+- Connecting front end to back end was a struggle ☹️
 
 ## Resources
 
@@ -22,6 +22,6 @@ Built with React + Vite, JavaScript, HTML, CSS
 
 - Overriding Inline Styling: https://stackoverflow.com/questions/16813220/how-can-i-override-inline-styles-with-external-css
 
-- MERN Stack Tutorial: https://www.youtube.com/watch?v=-42K44A1oMA
+- Fixing endpoint connections (MERN Stack Tutorial): https://www.youtube.com/watch?v=-42K44A1oMA
 
 - React + Axios: https://www.freecodecamp.org/news/how-to-use-axios-with-react/#how-to-make-a-get-request
