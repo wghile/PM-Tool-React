@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
-import Popup from 'reactjs-popup';
+import { Link, useParams } from 'react-router-dom'
+import Popup from 'reactjs-popup'
 
 export default function Dashboard() {
+
+    const params = useParams()
+    const id = params.id
+
   return (
     <div className='Dashboard'>
         <header>
@@ -36,19 +40,19 @@ export default function Dashboard() {
         </header>
         <nav>
             <span className='slash'>/</span>
-            <Link to='/dashboard' style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard`} style={{textDecoration: 'none', color: 'azure'}}>
                 Home
             </Link>
             <span className='slash'>/</span>
-            <Link to='/dashboard/service' style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard/service`} style={{textDecoration: 'none', color: 'azure'}}>
                 Service Requests
             </Link>
             <span className='slash'>/</span>
-            <Link to='/dashboard/budget' style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard/budget`} style={{textDecoration: 'none', color: 'azure'}}>
                 Budget
             </Link>
             <span className='slash'>/</span>
-            <Link to='/dashboard/docs' style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard/docs`} style={{textDecoration: 'none', color: 'azure'}}>
                 Document Center
             </Link>
         </nav>
