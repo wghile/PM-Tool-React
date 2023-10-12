@@ -34,9 +34,9 @@ export default function HomePage() {
             return (
               <li key={item._id}>
                 <Link to={`/${item._id}/dashboard`} style={{textDecoration: 'none', color: 'gray'}}>
-                  {item.address}, {item.city}, {item.country}
+                  📍 {item.address}, {item.city}, {item.country}
                 </Link>
-                <Popup trigger={<button>Edit</button>} modal nested>
+                <Popup trigger={<span id='edit-button'>🖊️</span>} modal nested>
                   {close => (
                     <div className='modal'>
                       <button id='close' onClick={() => close()}>

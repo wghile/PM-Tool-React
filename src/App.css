@@ -153,13 +153,12 @@
   width: 50vw;
   margin: 20px 0px;
   padding: 40px;
-  /* border: 2px solid black; */
 
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-  align-items: center;
+  align-items: end;
   justify-items: center;
-  row-gap: 50px;
+  row-gap: 40px;
 }
   .HomePage > main > h1{
     grid-row: 1/2;
@@ -170,21 +169,33 @@
     align-self: baseline;
     overflow-y: scroll;
     height: 40vh;
+    list-style: none;
 
     display: grid;
     row-gap: 50px;
-    justify-items: start;
   }
-    .HomePage > main > ul > li::marker{
-      content: '📍 '
-    }
-    .HomePage > main > ul > li{
-      margin-left: 40px;
-      line-height: 0.35in;
-      font-size: 18px;
+  .HomePage > main > ul > li{
+    line-height: 0.35in;
+    font-size: 18px;
+    
+    display: grid;
+    grid-template-columns: 450px 40px;
+    column-gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+    .HomePage > main > ul > li > a{
+      grid-column: 1/2;
     }
     .HomePage > main > ul > li > a:hover{
       color: azure !important;
+    }
+    .HomePage > main > ul > li > #edit-button{
+      grid-column: 2/3;
+      font-size: 25px;
+    }
+    .HomePage > main > ul > li > #edit-button:hover{
+      cursor: pointer;
     }
   .HomePage > main > button{
     font-size: 18px;
