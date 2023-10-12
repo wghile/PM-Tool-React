@@ -169,6 +169,7 @@
     grid-row: 2/3;
     align-self: baseline;
     overflow-y: scroll;
+    height: 40vh;
 
     display: grid;
     row-gap: 50px;

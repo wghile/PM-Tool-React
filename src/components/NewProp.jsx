@@ -11,19 +11,6 @@ export default function NewProp({close}) {
 
   const BASE_URL = 'http://localhost:3001'
 
-  // const addNewProperty = () => {
-  //   const newProperty = {
-  //     address: address,
-  //     city: city,
-  //     zip: zip,
-  //     country: country,
-  //     name: name,
-  //   }
-  //   console.log(newProperty)
-  //   axios.post(BASE_URL, newProperty).then((response) => {
-  //     console.log(response.data)
-  //   })
-  // }
   async function addNewProperty() {
     try{
       const newProperty = {
@@ -33,17 +20,12 @@ export default function NewProp({close}) {
         country,
         name,
       }
-      console.log(newProperty)
-      // await axios.post(BASE_URL, {newProperty})
+      // console.log(newProperty)
       await axios({
           url: BASE_URL,
           method: 'POST',
           data: newProperty
       })
-      // if(res.status === 200){
-      //     console.log(res)
-      //     return res.data
-      // }
     }catch(error){
       console.log(error)
     }

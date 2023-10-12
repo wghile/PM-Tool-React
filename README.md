@@ -21,3 +21,5 @@ Built with React + Vite, JavaScript, HTML, CSS
 - Pop Ups and Menu: https://www.geeksforgeeks.org/how-to-create-popup-box-in-reactjs/, https://www.npmjs.com/package/reactjs-popup
 
 - Overriding Inline Styling: https://stackoverflow.com/questions/16813220/how-can-i-override-inline-styles-with-external-css
+
+- MERN Stack Tutorial: https://www.youtube.com/watch?v=-42K44A1oMA
