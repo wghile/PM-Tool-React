@@ -7,6 +7,7 @@ import StartPage from './pages/StartPage'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
 import AppFooter from './components/App-Footer'
+import EditProp from './components/EditProp'
 
 function App() {
 

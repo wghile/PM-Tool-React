@@ -36,7 +36,7 @@ export default function NewProp({close}) {
       <h1>
         New Property
       </h1>
-      <form action='POST'>
+      <form>
         <div id='street'>
           Street Address: <input type='text' value={address} onChange={(evt) => setAddress(evt.target.value)}/>
         </div>

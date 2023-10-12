@@ -1,39 +1,38 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
-
 
 export default function EditProp({close, property}) {
 
-  const [address, setAddress] = useState('')
-  const [city, setCity] = useState('')
-  const [zip, setZip] = useState('')
-  const [country, setCountry] = useState('')
-  const [name, setName] = useState('')
-
-  const [propertyData, setPropertyData] = useState({})
+  const [address, setAddress] = useState(property.address)
+  const [city, setCity] = useState(property.city)
+  const [zip, setZip] = useState(property.zip)
+  const [country, setCountry] = useState(property.country)
+  const [name, setName] = useState(property.name)
 
   const BASE_URL = 'http://localhost:3001'
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/${property._id}`).then((response) => {
-      // setPropertyData(response.data)
-      // console.log(response.data)
-    }), []
+    axios.get(`${BASE_URL}/${property._id}`), []
   })
 
-  const updateFunction = () => {
-    const updatedProperty = {
-      address: address,
-      city: city,
-      zip: zip,
-      country: country,
-      name: name,
+  const updateFunction = async() => {
+    try{
+      const updates = {
+        address,
+        city,
+        zip,
+        country,
+        name
+      }
+      console.log(updates)
+      await axios({
+        url: `${BASE_URL}/${property._id}`,
+        method: 'PUT',
+        data: updates
+      })
+    }catch(error){
+      console.log(error)
     }
-    axios.put(`${BASE_URL}/${property._id}`, updatedProperty).then((response) => {
-      console.log(response.data)
-      setPropertyData(response.data)
-    })
   }
 
   return (
@@ -43,22 +42,23 @@ export default function EditProp({close, property}) {
       </h1>
       <form>
         <div id='street'>
-          Street Address: <input type='text' defaultValue={property.address} onChange={(evt) => setAddress(evt.target.value)}/>
+          Street Address: <input type='text' value={address} onChange={(evt) => setAddress(evt.target.value)}/>
         </div>
         <div id='city'>
-          City: <input type='text' defaultValue={property.city} onChange={(evt) => setCity(evt.target.value)}/>
+          City: <input type='text' value={city} onChange={(evt) => setCity(evt.target.value)}/>
         </div>
         <div id='zip'>
-          Zip Code: <input type='number' defaultValue={property.zip} onChange={(evt) => setZip(evt.target.value)}/>
+          Zip Code: <input type='number' value={zip} onChange={(evt) => setZip(evt.target.value)}/>
         </div>
         <div id='country'>
-          Country: <input type='text' defaultValue={property.country} onChange={(evt) => setCountry(evt.target.value)}/>
+          Country: <input type='text' value={country} onChange={(evt) => setCountry(evt.target.value)}/>
         </div>
         <div id='name'>
-          Nickname: <input type='text' placeholder='Optional' defaultValue={property.name} onChange={(evt) => setName(evt.target.value)}/>
+          Nickname: <input type='text' placeholder='Optional' value={name} onChange={(evt) => setName(evt.target.value)}/>
         </div>
       </form>
       <button onClick={() => {
+        updateFunction()
         close()
       }}>
         Save Changes
