@@ -56,7 +56,9 @@ export default function Dashboard() {
                 Document Center
             </Link>
         </nav>
-        <main></main>
+        <main>
+            <img src='/images/websitedown.png' alt='Website Under Maintenance' />
+        </main>
     </div>
   )
 }
