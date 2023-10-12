@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import Popup from 'reactjs-popup'
+import DeletePrompt from '../components/DeletePrompt'
 
 export default function Dashboard() {
 
@@ -20,7 +21,7 @@ export default function Dashboard() {
                     </span>}
                 position='bottom'
                 on='hover'
-                mouseLeaveDelay={200}
+                mouseLeaveDelay={15000}
                 arrow={false}
             >
                 <div id='menu'>
@@ -30,6 +31,11 @@ export default function Dashboard() {
                     <div className='dropdown'>
                         Contact Us
                     </div>
+                    <Popup trigger={<div className='dropdown' id='delete' style={{fontWeight: 'bold', color: 'red'}}>DELETE</div>} modal nested>
+                        {close => (
+                            <DeletePrompt close={close}/>
+                        )}
+                    </Popup>
                     <div className='dropdown'>
                         <Link to='/' style={{textDecoration: 'none', color: 'beige'}}>
                             Log Out
