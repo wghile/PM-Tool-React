@@ -6,6 +6,11 @@ Property Management Tool to help property owners organize and store all document
 
 Built with React + Vite, JavaScript, HTML, CSS
 
+## User Stories
+
+- Can add new property
+- Can edit property
+
 ## Features for Future Enhancements
 
 - User Authentication
