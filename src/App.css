@@ -337,6 +337,9 @@
     align-items: center;
     column-gap: 5px;
   }
+  .Dashboard > header > #settings:hover{
+    cursor: pointer;
+  }
     .Dashboard > header > #settings > img{
       width: 20px;
     }
@@ -375,20 +378,28 @@
       justify-content: space-around;
     }
     .DeletePrompt > div > button{
-      color: darkslategray;
+      color: black;
+      font-weight: bold;
       font-family: Courier Prime;
       font-size: 16px;
       height: 35px;
       padding: 5px 20px;
       border-radius: 10px;
-      border: 2px inset darkslategray;
+      border: 2px inset black;
       background-color: white;
       transition: all 300ms ease-in-out;
     }
     .DeletePrompt > div > button:hover{
-      background-color: darkslategrey;
-      color: white;
       cursor: pointer;
+      color: white;
+    }
+    .DeletePrompt > div > #yes-button:hover{
+      background-color: red;
+      border: 2px inset red;
+    }
+    .DeletePrompt > div > #no-button:hover{
+      background-color: darkslategray;
+      border: 2px inset darkslategray;
     }
 
 .Dashboard > nav{

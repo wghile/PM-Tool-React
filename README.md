@@ -4,12 +4,7 @@ Property Management Tool to help property owners organize and store all document
 
 [BackEnd](https://github.com/wghile/PM-Tool-Express)
 
-Built with React + Vite, JavaScript, HTML, CSS
-
-## User Stories
-
-- Can add new property
-- Can edit property
+Built with React + Vite, JavaScript, Axios, HTML, CSS
 
 ## Features for Future Enhancements
 
@@ -24,6 +19,8 @@ Built with React + Vite, JavaScript, HTML, CSS
 ## Resources
 
 - Pop Ups and Menu: https://www.geeksforgeeks.org/how-to-create-popup-box-in-reactjs/, https://www.npmjs.com/package/reactjs-popup
+
+- Troubleshooting Pop Ups (this resource helped me realize that the parent pop up component had default closing attributes which is why child pop up component functions were not working): https://stackoverflow.com/questions/71435229/facing-quite-strange-issue-in-popup-closing-in-react-method-is-getting-called-b
 
 - Overriding Inline Styling: https://stackoverflow.com/questions/16813220/how-can-i-override-inline-styles-with-external-css
 

@@ -20,7 +20,6 @@ export default function NewProp({close}) {
         country,
         name,
       }
-      // console.log(newProperty)
       await axios({
           url: BASE_URL,
           method: 'POST',

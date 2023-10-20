@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 export default function EditProp({close, property}) {
@@ -11,10 +11,6 @@ export default function EditProp({close, property}) {
 
   const BASE_URL = 'http://localhost:3001'
 
-  useEffect(() => {
-    axios.get(`${BASE_URL}/${property._id}`), []
-  })
-
   const updateFunction = async() => {
     try{
       const updates = {
@@ -24,7 +20,6 @@ export default function EditProp({close, property}) {
         country,
         name
       }
-      console.log(updates)
       await axios({
         url: `${BASE_URL}/${property._id}`,
         method: 'PUT',

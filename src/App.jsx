@@ -1,13 +1,12 @@
 import { Route, Routes} from 'react-router-dom'
 import './App.css'
-import HomePage from './pages/HomePage'
+import List from './pages/PropertyList'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import StartPage from './pages/StartPage'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
 import AppFooter from './components/App-Footer'
-import EditProp from './components/EditProp'
 
 function App() {
 
@@ -18,7 +17,7 @@ function App() {
         <Route path='/' element={<StartPage />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/home' element={<HomePage />} />
+        <Route path='/home' element={<List />} />
         <Route path='/:id/dashboard' element={<Dashboard />} />
       </Routes>
       <AppFooter />

@@ -20,9 +20,9 @@ export default function Dashboard() {
                         Settings
                     </span>}
                 position='bottom'
-                on='hover'
-                mouseLeaveDelay={15000}
+                on='click'
                 arrow={false}
+                closeOnDocumentClick={false}
             >
                 <div id='menu'>
                     <div className='dropdown'>

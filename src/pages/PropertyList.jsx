@@ -1,9 +1,9 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import axios from 'axios'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
-import { useEffect, useState } from 'react'
 
 export default function HomePage() {
 
@@ -16,12 +16,6 @@ export default function HomePage() {
       setList(response.data)
     }), []
   })
-
-  // const addNewProperty = () => {
-  //   axios.post(BASE_URL), newProperty.then((response) => {
-  //     setList(response.data)
-  //   })
-  // }
 
   return (
     <div className='HomePage'>
