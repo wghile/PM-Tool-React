@@ -5,11 +5,9 @@ import axios from 'axios'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
 
-export default function HomePage() {
+export default function HomePage({setList, list}) {
 
   const BASE_URL = 'http://localhost:3001'
-
-  const [list, setList] = useState([])
 
   useEffect(() => {
     axios.get(BASE_URL).then((response) => {

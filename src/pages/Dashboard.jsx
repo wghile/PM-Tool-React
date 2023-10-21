@@ -6,10 +6,13 @@ import Temporary from '../components/Temporary'
 import Services from '../components/Services'
 import Documents from '../components/Documents'
 
-export default function Dashboard() {
+export default function Dashboard({properties}) {
 
     const params = useParams()
     const id = params.id
+
+    const property = properties.find((item) => item._id === id)
+    // console.log(property)
 
   return (
     <div className='Dashboard'>
