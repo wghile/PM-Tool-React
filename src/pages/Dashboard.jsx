@@ -1,6 +1,10 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import Popup from 'reactjs-popup'
 import DeletePrompt from '../components/DeletePrompt'
+import Temporary from '../components/Temporary'
+import Services from '../components/Services'
+import Documents from '../components/Documents'
 
 export default function Dashboard() {
 
@@ -46,25 +50,27 @@ export default function Dashboard() {
         </header>
         <nav>
             <span className='slash'>/</span>
-            <Link to={`/${id}/dashboard`} style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard`} className='dashboard-sublinks' style={{textDecoration: 'none', color: 'azure'}}>
                 Home
             </Link>
             <span className='slash'>/</span>
-            <Link to={`/${id}/dashboard/service`} style={{textDecoration: 'none', color: 'azure'}}>
+            <Link to={`/${id}/dashboard/service`} className='dashboard-sublinks' style={{textDecoration: 'none', color: 'azure'}}>
                 Service Requests
             </Link>
             <span className='slash'>/</span>
-            <Link to={`/${id}/dashboard/budget`} style={{textDecoration: 'none', color: 'azure'}}>
+            {/* <Link to={`/${id}/dashboard/budget`} style={{textDecoration: 'none', color: 'azure'}}>
                 Budget
             </Link>
-            <span className='slash'>/</span>
-            <Link to={`/${id}/dashboard/docs`} style={{textDecoration: 'none', color: 'azure'}}>
+            <span className='slash'>/</span> */}
+            <Link to={`/${id}/dashboard/docs`} className='dashboard-sublinks' style={{textDecoration: 'none', color: 'azure'}}>
                 Document Center
             </Link>
         </nav>
-        <main>
-            <img src='/images/websitedown.png' alt='Website Under Maintenance' />
-        </main>
+        <Routes>
+            <Route path='/' element={<Temporary />} />
+            <Route path='/service' element={<Services />} />
+            <Route path='/docs' element={<Documents />} />
+        </Routes>
     </div>
   )
 }
