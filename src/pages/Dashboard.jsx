@@ -1,5 +1,4 @@
 import { Link, useParams, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
 import Popup from 'reactjs-popup'
 import DeletePrompt from '../components/DeletePrompt'
 import Temporary from '../components/Temporary'
@@ -12,7 +11,6 @@ export default function Dashboard({properties}) {
     const id = params.id
 
     const property = properties.find((item) => item._id === id)
-    // console.log(property)
 
   return (
     <div className='Dashboard'>

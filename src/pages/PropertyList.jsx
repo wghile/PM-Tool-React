@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {getPropertyList} from '../services/api'
+import { getPropertyList } from '../services/api'
 import Popup from 'reactjs-popup'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
