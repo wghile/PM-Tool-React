@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import { useState } from 'react'
 import './App.css'
 import List from './pages/PropertyList'
 import LogIn from './pages/LogIn'

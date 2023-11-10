@@ -4,19 +4,48 @@
 import axios from 'axios'
 const BASE_URL = 'http://localhost:3001'
 
+
 // Show All Properties
+// export async function getPropertyList(){
+//     try{
+//         await axios({
+//             url: BASE_URL,
+//             method: 'GET',
+//             data: response
+//         })
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
 export function getPropertyList(){
     return axios.get(BASE_URL)
 }
 
 // New Property
-
+export async function addNewProperty(newProperty) {
+    try{
+      await axios({
+          url: BASE_URL,
+          method: 'POST',
+          data: newProperty
+      })
+    }catch(error){
+      console.log(error)
+    }
+  }
 
 // Edit Property
-
-
-
-
+export async function updateFunction(updates, id){
+    try{
+        await axios({
+            url: `${BASE_URL}/${id}`,
+            method: 'PUT',
+            data: updates
+        })
+    }catch(error){
+      console.log(error)
+    }
+  }
 
 // Remove a Property by id
 export async function removeProperty(id) {

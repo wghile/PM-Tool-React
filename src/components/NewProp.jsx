@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import { addNewProperty } from '../services/api'
 
 export default function NewProp({close}) {
 
@@ -9,25 +9,12 @@ export default function NewProp({close}) {
   const [country, setCountry] = useState('')
   const [name, setName] = useState('')
 
-  const BASE_URL = 'http://localhost:3001'
-
-  async function addNewProperty() {
-    try{
-      const newProperty = {
-        address,
-        city,
-        zip,
-        country,
-        name,
-      }
-      await axios({
-          url: BASE_URL,
-          method: 'POST',
-          data: newProperty
-      })
-    }catch(error){
-      console.log(error)
-    }
+  const newProperty = {
+    address,
+    city,
+    zip,
+    country,
+    name
   }
 
   return (
@@ -53,7 +40,7 @@ export default function NewProp({close}) {
         </div>
       </form>
       <button onClick={() => {
-        addNewProperty()
+        addNewProperty(newProperty)
         close()
       }}>
         Save

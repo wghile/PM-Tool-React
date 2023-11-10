@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import { updateFunction } from '../services/api'
 
 export default function EditProp({close, property}) {
 
@@ -9,26 +9,15 @@ export default function EditProp({close, property}) {
   const [country, setCountry] = useState(property.country)
   const [name, setName] = useState(property.name)
 
-  const BASE_URL = 'http://localhost:3001'
-
-  const updateFunction = async() => {
-    try{
-      const updates = {
-        address,
-        city,
-        zip,
-        country,
-        name
-      }
-      await axios({
-        url: `${BASE_URL}/${property._id}`,
-        method: 'PUT',
-        data: updates
-      })
-    }catch(error){
-      console.log(error)
-    }
+  const updates = {
+    address,
+    city,
+    zip,
+    country,
+    name
   }
+
+  const id = property._id
 
   return (
     <div className='NewProp'>
@@ -53,7 +42,7 @@ export default function EditProp({close, property}) {
         </div>
       </form>
       <button onClick={() => {
-        updateFunction()
+        updateFunction(updates, id)
         close()
       }}>
         Save Changes
