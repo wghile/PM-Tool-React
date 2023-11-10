@@ -1,16 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import {getPropertyList} from '../services/api'
 import Popup from 'reactjs-popup'
-import axios from 'axios'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
 
 export default function HomePage({setList, list}) {
 
-  const BASE_URL = 'http://localhost:3001'
-
   useEffect(() => {
-    axios.get(BASE_URL).then((response) => {
+    getPropertyList().then((response) => {
       setList(response.data)
     }), []
   })

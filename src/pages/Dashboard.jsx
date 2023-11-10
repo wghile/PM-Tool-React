@@ -12,7 +12,7 @@ export default function Dashboard({properties}) {
     const id = params.id
 
     const property = properties.find((item) => item._id === id)
-    console.log(property)
+    // console.log(property)
 
   return (
     <div className='Dashboard'>
