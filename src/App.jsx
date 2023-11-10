@@ -11,8 +11,6 @@ import AppFooter from './components/App-Footer'
 
 function App() {
 
-  const [list, setList] = useState([])
-
   return (
     <div className='App'>
       <AppNav />
@@ -20,8 +18,8 @@ function App() {
         <Route path='/' element={<StartPage />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/home' element={<List setList={setList} list={list}/>} />
-        <Route path='/:id/dashboard/*' element={<Dashboard properties={list}/>} />
+        <Route path='/home' element={<List />} />
+        <Route path='/:id/dashboard/*' element={<Dashboard />} />
       </Routes>
       <AppFooter />
     </div>

@@ -5,12 +5,12 @@ import Temporary from '../components/Temporary'
 import Services from '../components/Services'
 import Documents from '../components/Documents'
 
-export default function Dashboard({properties}) {
+export default function Dashboard() {
 
     const params = useParams()
     const id = params.id
 
-    const property = properties.find((item) => item._id === id)
+    // const property = properties.find((item) => item._id === id)
 
   return (
     <div className='Dashboard'>

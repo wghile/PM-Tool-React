@@ -4,10 +4,21 @@
 import axios from 'axios'
 const BASE_URL = 'http://localhost:3001'
 
+// Show All Properties
 export function getPropertyList(){
     return axios.get(BASE_URL)
 }
 
+// New Property
+
+
+// Edit Property
+
+
+
+
+
+// Remove a Property by id
 export async function removeProperty(id) {
     try{
       await axios({

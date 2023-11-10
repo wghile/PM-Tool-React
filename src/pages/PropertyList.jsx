@@ -1,11 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getPropertyList } from '../services/api'
 import Popup from 'reactjs-popup'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
 
-export default function HomePage({setList, list}) {
+export default function HomePage() {
+
+  const [list, setList] = useState([])
 
   useEffect(() => {
     getPropertyList().then((response) => {
