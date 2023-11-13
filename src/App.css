@@ -318,7 +318,7 @@
 
   display: grid;
   grid-template-rows: 20px 50px 1fr;
-  gap: 10px 0px;
+  row-gap: 10px;
 }
 .Dashboard > header{
   grid-row: 1/2;
@@ -420,19 +420,27 @@
     font-size: 18px;
   }
 
-  /* Temporary Component */
-  .Temp{
+  /* Dash-Home Component */
+  .DashHome{
     grid-row: 3/4;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    row-gap: 50px;
   }
-  .Temp > img{
-    width: 500px;
-    height: 400px;
+  .DashHome > img{
+    flex: 3;
+    margin-top: 40px;
+    width: 350px;
     border-radius: 20px;
     border: 2px inset salmon;
+    background-color: rgba(248, 168, 159, 0.404);
+  }
+  .DashHome > h2{
+    flex: 1;
+    color: pink;
+    font-family: Cutive Mono;
   }
 
   /* Services Component */

@@ -1,16 +1,16 @@
 import { Link, useParams, Routes, Route } from 'react-router-dom'
 import Popup from 'reactjs-popup'
 import DeletePrompt from '../components/DeletePrompt'
-import Temporary from '../components/Temporary'
+import DashHome from '../components/DashHome'
 import Services from '../components/Services'
 import Documents from '../components/Documents'
 
-export default function Dashboard() {
+export default function Dashboard({properties}) {
 
     const params = useParams()
     const id = params.id
 
-    // const property = properties.find((item) => item._id === id)
+    const property = properties.find((item) => item._id === id)
 
   return (
     <div className='Dashboard'>
@@ -68,7 +68,7 @@ export default function Dashboard() {
             </Link>
         </nav>
         <Routes>
-            <Route path='/' element={<Temporary />} />
+            <Route path='/' element={<DashHome property={property}/>} />
             <Route path='/service' element={<Services />} />
             <Route path='/docs' element={<Documents />} />
         </Routes>

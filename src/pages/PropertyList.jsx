@@ -5,9 +5,9 @@ import Popup from 'reactjs-popup'
 import NewProp from '../components/NewProp'
 import EditProp from '../components/EditProp'
 
-export default function HomePage() {
+export default function HomePage({setList, list}) {
 
-  const [list, setList] = useState([])
+  // const [list, setList] = useState([])
 
   useEffect(() => {
     getPropertyList().then((response) => {

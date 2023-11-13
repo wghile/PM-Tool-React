@@ -10,8 +10,7 @@ const BASE_URL = 'http://localhost:3001'
 //     try{
 //         await axios({
 //             url: BASE_URL,
-//             method: 'GET',
-//             data: response
+//             method: 'GET'
 //         })
 //     }catch(error){
 //         console.log(error)

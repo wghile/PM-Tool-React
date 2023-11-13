@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
 import './App.css'
 import List from './pages/PropertyList'
 import LogIn from './pages/LogIn'
@@ -10,6 +11,8 @@ import AppFooter from './components/App-Footer'
 
 function App() {
 
+  const [list, setList] = useState([])
+
   return (
     <div className='App'>
       <AppNav />
@@ -17,8 +20,8 @@ function App() {
         <Route path='/' element={<StartPage />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/home' element={<List />} />
-        <Route path='/:id/dashboard/*' element={<Dashboard />} />
+        <Route path='/home' element={<List setList={setList} list={list}/>} />
+        <Route path='/:id/dashboard/*' element={<Dashboard properties={list}/>} />
       </Routes>
       {/* <AppFooter /> */}
     </div>
