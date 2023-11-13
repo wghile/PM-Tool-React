@@ -20,7 +20,7 @@ function App() {
         <Route path='/home' element={<List />} />
         <Route path='/:id/dashboard/*' element={<Dashboard />} />
       </Routes>
-      <AppFooter />
+      {/* <AppFooter /> */}
     </div>
   )
 }

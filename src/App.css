@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 60px 1fr 50px;
+  grid-template-rows: 60px 1fr;
 }
 
 /* App-Nav Component */
@@ -44,12 +44,12 @@
   grid-template-rows: 1fr 200px;
   justify-content: center;
   align-items: center;
-  gap: 40px 0px;
+  gap: 20px 0px;
 }
 .StartPage > main{
   grid-row: 1/2;
   width: 60vw;
-  margin-top: 50px;
+  margin-top: 30px;
 
   display: grid;
   grid-template-rows: 50px 80px 1fr;
@@ -115,7 +115,7 @@
 
   display: grid;
   grid-template-rows: 1fr 1fr;
-  row-gap: 40px;
+  row-gap: 30px;
   justify-content: center;
 }
 .StartPage > #buttons > div{
@@ -453,7 +453,7 @@
   }
 
 /* App-Footer Component */
-.AppFooter{
+/* .AppFooter{
   grid-row: 3/4;
   background-color: lavender;
   display: grid;
@@ -468,4 +468,4 @@
 }
 .AppFooter > p > span{
   font-size: 25px;
-}
+} */
