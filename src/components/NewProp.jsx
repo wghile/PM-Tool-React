@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { addNewProperty } from '../services/api'
+import { addNewProperty } from '../services/property-api'
 
 export default function NewProp({close}) {
 

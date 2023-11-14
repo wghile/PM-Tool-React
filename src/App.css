@@ -151,14 +151,13 @@
 }
 .HomePage > main{
   width: 50vw;
-  margin: 20px 0px;
   padding: 40px;
 
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   align-items: end;
   justify-items: center;
-  row-gap: 40px;
+  row-gap: 30px;
 }
   .HomePage > main > h1{
     grid-row: 1/2;
@@ -166,9 +165,9 @@
   }
   .HomePage > main > ul{
     grid-row: 2/3;
-    align-self: baseline;
+    align-self: center;
     overflow-y: scroll;
-    height: 40vh;
+    height: 50vh;
     list-style: none;
 
     display: grid;
@@ -317,7 +316,7 @@
   padding: 20px 50px;
 
   display: grid;
-  grid-template-rows: 20px 50px 1fr;
+  grid-template-rows: 20px 80px 1fr;
   row-gap: 10px;
 }
 .Dashboard > header{
@@ -427,11 +426,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 50px;
+    margin-top: 20px;
+    row-gap: 40px;
   }
   .DashHome > img{
     flex: 3;
-    margin-top: 40px;
     width: 350px;
     border-radius: 20px;
     border: 2px inset salmon;
@@ -446,6 +445,95 @@
   /* Services Component */
 
   /* Docs Component */
+  .Docs{
+    grid-row: 3/4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .Docs > button{
+    flex: 1;
+    font-family: cursive;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: 2px black ridge;
+    border-radius: 10px;
+
+  }
+  .Docs > button:hover{
+    cursor: pointer;
+  }
+  .Docs > main{
+    flex: 10;
+    width: 600px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    overflow: scroll;
+    gap: 20px;
+  }
+
+  /* Doc Card Component */
+  .DocCard{
+    width: 180px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  .DocCard > #img-container{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+  }
+  .DocCard > #img-container > img{
+    width: 120px;
+    padding-top: 10px;
+  }
+  .DocCard > #text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    z-index: 1;
+    background-color: black;
+    height: 100px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    position: relative;
+      bottom: 33px;
+    padding: 10px;
+    font-family: Cutive Mono;
+    color: white;
+  }
+  .DocCard > #text > h1{
+    flex: 2;
+    align-self: left;
+    font-size: 20px;
+    overflow-wrap: break-word;
+  }
+  .DocCard > #text > #actions{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+  }
+  .DocCard > #text > #actions > img{
+    width: 25px;
+    border: 0.5px solid white;
+    border-radius: 50%;
+  }
+  .DocCard > #text > #actions > img:hover{
+    cursor: pointer;
+  }
+  .DocCard > #text > p{
+    font-size: 10px;
+    font-style: italic;
+  }
 
   /* Menu */
   #menu{

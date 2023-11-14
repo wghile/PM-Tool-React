@@ -2,20 +2,9 @@
     //responses = axios.put/.post/.get/.delete
     //import request function from services file into components
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3001'
-
+const BASE_URL = 'http://localhost:3001/property'
 
 // Show All Properties
-// export async function getPropertyList(){
-//     try{
-//         await axios({
-//             url: BASE_URL,
-//             method: 'GET'
-//         })
-//     }catch(error){
-//         console.log(error)
-//     }
-// }
 export function getPropertyList(){
     return axios.get(BASE_URL)
 }

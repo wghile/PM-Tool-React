@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateFunction } from '../services/api'
+import { updateFunction } from '../services/property-api'
 
 export default function EditProp({close, property}) {
 
