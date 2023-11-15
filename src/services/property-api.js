@@ -2,7 +2,7 @@
     //responses = axios.put/.post/.get/.delete
     //import request function from services file into components
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3001/property'
+const BASE_URL = 'http://localhost:3001'
 
 // Show All Properties
 export function getPropertyList(){

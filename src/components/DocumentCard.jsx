@@ -10,7 +10,7 @@ export default function DocumentCard({doc}) {
                 <img src='/images/trashcan.png' alt='Trash Can'/>
             </div>
             <h1>
-                {doc.name}
+                {doc.title}
             </h1>
             <p>
                 Updated at: 

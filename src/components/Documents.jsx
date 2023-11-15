@@ -1,16 +1,8 @@
-import { useState, useEffect } from 'react'
-// import { getDocuments } from '../services/documents-api'
 import DocumentCard from './DocumentCard'
 
-export default function Documents() {
+export default function Documents({docs}) {
 
-  const [docs, setDocs] = useState([])
-
-  useEffect(() => {
-    getDocuments().then((response) => {
-      setDocs(response.data)
-    }), []
-  })
+  console.log(docs)
   
   return (
     <div className='Docs'>

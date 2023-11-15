@@ -60,10 +60,6 @@ export default function Dashboard({properties}) {
                 Service Requests
             </Link>
             <span className='slash'>/</span>
-            {/* <Link to={`/${id}/dashboard/budget`} style={{textDecoration: 'none', color: 'azure'}}>
-                Budget
-            </Link>
-            <span className='slash'>/</span> */}
             <Link to={`/${id}/dashboard/docs`} className='dashboard-sublinks' style={{textDecoration: 'none', color: 'azure'}}>
                 Document Center
             </Link>
@@ -71,7 +67,7 @@ export default function Dashboard({properties}) {
         <Routes>
             <Route path='/' element={<DashHome property={property}/>} />
             <Route path='/service' element={<Services />} />
-            <Route path='/docs' element={<Documents />} />
+            <Route path='/docs' element={<Documents docs={property.docs}/>} />
         </Routes>
     </div>
   )
