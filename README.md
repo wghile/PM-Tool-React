@@ -27,3 +27,5 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - Fixing endpoint connections (MERN Stack Tutorial): https://www.youtube.com/watch?v=-42K44A1oMA
 
 - React + Axios: https://www.freecodecamp.org/news/how-to-use-axios-with-react/#how-to-make-a-get-request
+
+- Adding an array of objects as one of the model's properties: https://www.dctacademy.com/blog/storing-an-array-of-objects-in-a-mongoose-field-a-guide#:~:text=To%20store%20an%20array%20of,const%20schema%20%3D%20new%20mongoose.

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getDocuments } from '../services/documents-api'
+// import { getDocuments } from '../services/documents-api'
 import DocumentCard from './DocumentCard'
 
 export default function Documents() {

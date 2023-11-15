@@ -14,7 +14,7 @@ export default function NewProp({close}) {
     city,
     zip,
     country,
-    name
+    name,
   }
 
   return (
