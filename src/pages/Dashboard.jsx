@@ -1,4 +1,6 @@
 import { Link, useParams, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { getProperty } from '../services/property-api'
 import Popup from 'reactjs-popup'
 import DeletePrompt from '../components/DeletePrompt'
 import DashHome from '../components/DashHome'
@@ -11,7 +13,15 @@ export default function Dashboard({properties}) {
     const id = params.id
 
     const property = properties.find((item) => item._id === id)
-    console.log(property)
+
+    const [prop, setProp] = useState()
+
+    useEffect(() => {
+        getProperty(id).then((response) => {
+        setProp(response.data)
+        }), []
+    })
+    // console.log(prop)
 
   return (
     <div className='Dashboard'>

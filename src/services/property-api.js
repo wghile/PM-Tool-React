@@ -9,6 +9,19 @@ export function getPropertyList(){
     return axios.get(BASE_URL)
 }
 
+// Find Property by id
+export async function getProperty(id){
+  try{
+    const response = await axios({
+      url: `${BASE_URL}/${id}`,
+      method: 'GET'
+    })
+    return response
+  }catch(error){
+    console.log(error)
+  }
+}
+
 // New Property
 export async function addNewProperty(newProperty) {
     try{
@@ -22,7 +35,7 @@ export async function addNewProperty(newProperty) {
     }
   }
 
-// Edit Property
+// Update Property
 export async function updateFunction(updates, id){
     try{
         await axios({
@@ -43,6 +56,6 @@ export async function removeProperty(id) {
         method: 'DELETE'
       })
     }catch(error){
-      console.error(error)
+      console.log(error)
     }
   }

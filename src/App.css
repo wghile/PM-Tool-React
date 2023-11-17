@@ -475,6 +475,46 @@
     overflow: scroll;
     gap: 20px;
   }
+  .modal-Docs{
+    width: 30vw;
+    height: 50vh;
+  }
+
+  /* New Doc Component */
+  .NewDoc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    color: darkslategray;
+    font-family: Courier Prime;
+  }
+  .NewDoc > form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .NewDoc > form > #url > input{
+    width: 250px;
+    overflow-x: scroll;
+  }
+  .NewDoc > button{
+    color: darkslategray;
+    font-family: Courier Prime;
+    font-size: 16px;
+    height: 35px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px inset darkslategray;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+  }
+  .NewDoc > button:hover{
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+  }
 
   /* Doc Card Component */
   .DocCard{

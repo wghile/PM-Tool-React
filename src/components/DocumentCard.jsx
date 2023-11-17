@@ -13,7 +13,7 @@ export default function DocumentCard({doc}) {
                 {doc.title}
             </h1>
             <p>
-                Updated at: 
+                Updated at: {doc.timestamp}
             </p>
         </div>
     </div>
