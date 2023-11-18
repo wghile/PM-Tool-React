@@ -22,7 +22,7 @@ export default function Documents({docs, property}) {
         {docs?.map((doc) => {
           // console.log(docs)
           return(
-            <DocumentCard doc={doc}/>
+            <DocumentCard property={property} doc={doc}/>
           )
         })}
       </main>

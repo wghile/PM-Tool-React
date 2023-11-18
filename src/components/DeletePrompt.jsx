@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { removeProperty } from '../services/property-api'
 

@@ -3,6 +3,14 @@ import { updateFunction } from '../services/property-api'
 
 export default function NewDoc({close, property}) {
 
+  const id = property._id
+  
+  const timestamp = () => {
+    const dateNow = new Date()
+    let formattedDate = `${dateNow.getMonth() + 1}/${dateNow.getDate()}/${dateNow.getFullYear()} ${dateNow.getHours()}:${dateNow.getMinutes()}`
+    return formattedDate
+  }
+
   const [address, setAddress] = useState(property.address)
   const [city, setCity] = useState(property.city)
   const [zip, setZip] = useState(property.zip)
@@ -11,12 +19,12 @@ export default function NewDoc({close, property}) {
   const [docs, setDocs] = useState(property.docs)
   const [title, setTitle] = useState('')
   const [url, setUrl] = useState('')
+  const [updatedAt, setUpdatedAt] = useState(timestamp())
 
-  const id = property._id
-  
   const newDoc = {
     title,
-    url
+    url, 
+    updatedAt
   }
 
   function inputDoc(){
