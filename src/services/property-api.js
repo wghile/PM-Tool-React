@@ -36,7 +36,7 @@ export async function addNewProperty(newProperty) {
   }
 
 // Update Property
-export async function updateFunction(updates, id){
+export async function updateFunction(id, updates){
     try{
         await axios({
             url: `${BASE_URL}/${id}`,

@@ -1,4 +1,11 @@
 export default function DocumentCard({doc}) {
+
+    // const dateNow = new Date()
+    // let timestamp = `${dateNow.getMonth() + 1}/${dateNow.getDate()}/${dateNow.getFullYear()} ${dateNow.getHours()}:${dateNow.getMinutes()}`
+
+    const timestamp = new Date(doc.createdAt)
+    // console.log(timestamp)
+
   return (
     <div className='DocCard'>
         <div id='img-container'>
@@ -13,7 +20,7 @@ export default function DocumentCard({doc}) {
                 {doc.title}
             </h1>
             <p>
-                Updated at: {doc.timestamp}
+                Updated: {`${timestamp.getMonth() + 1}/${timestamp.getDate()}/${timestamp.getFullYear()} ${timestamp.getHours()}:${timestamp.getMinutes()}`}
             </p>
         </div>
     </div>

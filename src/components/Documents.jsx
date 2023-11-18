@@ -19,8 +19,8 @@ export default function Documents({docs, property}) {
         )}
       </Popup>
       <main>
-        {docs.map((doc) => {
-          console.log(docs)
+        {docs?.map((doc) => {
+          // console.log(docs)
           return(
             <DocumentCard doc={doc}/>
           )

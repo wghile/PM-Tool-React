@@ -12,8 +12,6 @@ export default function Dashboard() {
     const params = useParams()
     const id = params.id
 
-    // const property = properties.find((item) => item._id === id)
-
     const [prop, setProp] = useState()
 
     useEffect(() => {
@@ -21,7 +19,6 @@ export default function Dashboard() {
         setProp(response.data)
         }), []
     })
-    // console.log(prop)
 
   return (
     <div className='Dashboard'>

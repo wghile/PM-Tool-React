@@ -3,25 +3,26 @@ import { updateFunction } from '../services/property-api'
 
 export default function NewDoc({close, property}) {
 
-  const [title, setTitle] = useState('')
-  const [url, setUrl] = useState('')
-
   const [address, setAddress] = useState(property.address)
   const [city, setCity] = useState(property.city)
   const [zip, setZip] = useState(property.zip)
   const [country, setCountry] = useState(property.country)
   const [name, setName] = useState(property.name)
-  const [docs, setDocs] = useState([])
+  const [docs, setDocs] = useState(property.docs)
+  const [title, setTitle] = useState('')
+  const [url, setUrl] = useState('')
 
-  // let dateNow = new Date()
+  const id = property._id
   
   const newDoc = {
     title,
     url
-    // timestamp: `${dateNow.getMonth() + 1}/${dateNow.getDate()}/${dateNow.getFullYear()} ${dateNow.getHours()}:${dateNow.getMinutes()}`
   }
 
-  // setDocs(newDoc)
+  function inputDoc(){
+    const newDocArray = property.docs.splice(0, 0, newDoc)
+    setDocs(newDocArray)
+  }
   
   const updates = {
     address,
@@ -46,9 +47,8 @@ export default function NewDoc({close, property}) {
         </div>
       </form>
       <button onClick={() => {
-        updateFunction(updates)
-        console.log(updates)
-        console.log(property)
+        inputDoc()
+        updateFunction(id, updates)
         close()
       }}>
         Save
