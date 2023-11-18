@@ -2,9 +2,9 @@ import Popup from 'reactjs-popup'
 import DocumentCard from './DocumentCard'
 import NewDoc from './NewDoc'
 
-export default function Documents({docs}) {
+export default function Documents({docs, property}) {
 
-  console.log(docs)
+  // console.log(docs)
   
   return (
     <div className='Docs'>
@@ -14,12 +14,13 @@ export default function Documents({docs}) {
             <button id='close' onClick={() => close()}>
               X
             </button>
-            <NewDoc close={close} docs={docs}/>
+            <NewDoc close={close} property={property}/>
           </div>
         )}
       </Popup>
       <main>
         {docs.map((doc) => {
+          console.log(docs)
           return(
             <DocumentCard doc={doc}/>
           )

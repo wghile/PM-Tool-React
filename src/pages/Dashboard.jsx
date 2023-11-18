@@ -7,12 +7,12 @@ import DashHome from '../components/DashHome'
 import Services from '../components/Services'
 import Documents from '../components/Documents'
 
-export default function Dashboard({properties}) {
+export default function Dashboard() {
 
     const params = useParams()
     const id = params.id
 
-    const property = properties.find((item) => item._id === id)
+    // const property = properties.find((item) => item._id === id)
 
     const [prop, setProp] = useState()
 
@@ -75,9 +75,9 @@ export default function Dashboard({properties}) {
             </Link>
         </nav>
         <Routes>
-            <Route path='/' element={<DashHome property={property}/>} />
+            <Route path='/' element={<DashHome property={prop}/>} />
             <Route path='/service' element={<Services />} />
-            <Route path='/docs' element={<Documents docs={property.docs}/>} />
+            <Route path='/docs' element={<Documents docs={prop?.docs} property={prop}/>} />
         </Routes>
     </div>
   )
