@@ -9,12 +9,15 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 ## Features for Future Enhancements
 
 - User Authentication
-- Finish designing all components
-- Use API to display property info in dashboard
+- Be able to see a preview of document (still working on this..)
+- Add a refresh button to display documents after changes are made (low) or figure out how to have documents automatically render with updates (high)
+- Finish designing components
 
 ## Challenges
 
-- Connecting front end to back end was a struggle ☹️
+- Connecting front end to back end was a struggle 😓
+- Difficulty finding free API to display property information.. would've loved to consume an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house ☹️
+- Unable to add documents for a property unless I restart node.js. Not sure why this is and need to troubleshoot
 
 ## Resources
 

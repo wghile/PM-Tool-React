@@ -38,8 +38,10 @@ export default function DocumentCard({doc, property}) {
 
   return (
     <div className='DocCard'>
-        <div id='img-container'>
-            <img src='/images/docs.png' alt='Document Stock Photo'/>
+        <div id='img-container' onClick={() => openLink()}>
+            {/* <a href='google.com' target='_blank'> */}
+                <img src='/images/docs.png' alt='Document Stock Photo'/>
+            {/* </a> */}
         </div>
         <div id='text'>
             <div id='actions'>
@@ -53,7 +55,6 @@ export default function DocumentCard({doc, property}) {
                         </div>
                     )}
                 </Popup>
-                {/* <img src='/images/edit-icon.png' alt='Edit Logo'/> */}
                 <img 
                     src='/images/trashcan.png' 
                     alt='Trash Can'

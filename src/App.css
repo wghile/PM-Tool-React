@@ -522,6 +522,9 @@
     height: 200px;
     border: 2px solid black;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
   }
   .DocCard > #img-container{
     display: flex;
@@ -551,7 +554,7 @@
     color: white;
   }
   .DocCard > #text > h1{
-    flex: 2;
+    flex: 200px;
     align-self: left;
     font-size: 20px;
     overflow-wrap: break-word;
@@ -586,21 +589,3 @@
     border-bottom: 2px double beige;
     padding-bottom: 5px;
   }
-
-/* App-Footer Component */
-/* .AppFooter{
-  grid-row: 3/4;
-  background-color: lavender;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-}
-.AppFooter > p{
-  font-family: Dancing Script;
-  font-size: 20px;
-  letter-spacing: 0.02in;
-  color: rgba(73, 3, 104, 0.994);
-}
-.AppFooter > p > span{
-  font-size: 25px;
-} */

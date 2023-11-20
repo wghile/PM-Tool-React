@@ -7,7 +7,7 @@ import SignUp from './pages/SignUp'
 import StartPage from './pages/StartPage'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
-import AppFooter from './components/App-Footer'
+import DocLinks from './components/DocLinks'
 
 function App() {
 
@@ -23,7 +23,6 @@ function App() {
         <Route path='/home' element={<List setList={setList} list={list}/>} />
         <Route path='/:id/dashboard/*' element={<Dashboard properties={list}/>} />
       </Routes>
-      {/* <AppFooter /> */}
     </div>
   )
 }

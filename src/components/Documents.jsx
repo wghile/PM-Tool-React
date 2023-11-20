@@ -3,8 +3,6 @@ import DocumentCard from './DocumentCard'
 import NewDoc from './NewDoc'
 
 export default function Documents({docs, property}) {
-
-  // console.log(docs)
   
   return (
     <div className='Docs'>
@@ -20,9 +18,8 @@ export default function Documents({docs, property}) {
       </Popup>
       <main>
         {docs?.map((doc) => {
-          // console.log(docs)
           return(
-            <DocumentCard property={property} doc={doc}/>
+            <DocumentCard key={doc._id} property={property} doc={doc}/>
           )
         })}
       </main>
