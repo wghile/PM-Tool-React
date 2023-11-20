@@ -155,7 +155,6 @@
 
   display: grid;
   grid-template-rows: 80px 1fr 50px;
-  align-items: end;
   justify-items: center;
   row-gap: 30px;
 }
@@ -326,7 +325,7 @@
   padding: 20px 50px;
 
   display: grid;
-  grid-template-rows: 20px 80px 1fr;
+  grid-template-rows: 20px 40px 1fr;
   row-gap: 10px;
 }
 .Dashboard > header{
@@ -417,7 +416,7 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 22px;
 }
   .Dashboard > nav > .slash{
@@ -461,7 +460,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 20px;
   }
   .Docs > button{
     font-family: cursive;
