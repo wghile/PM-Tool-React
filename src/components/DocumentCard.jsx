@@ -1,5 +1,7 @@
+import Popup from 'reactjs-popup'
 import { updateFunction } from '../services/property-api'
 import { useState } from 'react'
+import EditDoc from './EditDoc'
 
 export default function DocumentCard({doc, property}) {
 
@@ -41,7 +43,17 @@ export default function DocumentCard({doc, property}) {
         </div>
         <div id='text'>
             <div id='actions'>
-                <img src='/images/edit-icon.png' alt='Edit Logo'/>
+                <Popup trigger={<img src='/images/edit-icon.png' alt='Edit Logo'/>} modal nested>
+                    {close => (
+                        <div className='modal modal-Docs'>
+                            <button id='close' onClick={() => close()}>
+                                X
+                            </button>
+                            <EditDoc close={close} property={property} docIndex={findDoc()}/>
+                        </div>
+                    )}
+                </Popup>
+                {/* <img src='/images/edit-icon.png' alt='Edit Logo'/> */}
                 <img 
                     src='/images/trashcan.png' 
                     alt='Trash Can'
