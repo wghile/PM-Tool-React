@@ -15,8 +15,8 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 
 ## Challenges
 
-- Connecting front end to back end was a struggle 😓
-- Difficulty finding free API to display property information.. would've loved to consume an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house ☹️
+- Connecting front end to back end
+- Difficulty finding free API to display property information.. would've loved to consume an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house.
 - Unable to add documents for a property unless I restart node.js. Not sure why this is and need to troubleshoot
 
 ## Resources
