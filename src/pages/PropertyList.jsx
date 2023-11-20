@@ -16,9 +16,14 @@ export default function HomePage({setList, list}) {
   return (
     <div className='HomePage'>
       <main>
-        <h1>
-            Select Property
-        </h1>
+        <header>
+          <h1>
+              Select Property
+          </h1>
+          <Link to='/phonebook'>
+            <img src='/images/phonebook.png' alt='PhoneBook'/>
+          </Link>
+        </header>
         <ul>
           {list.map((item) => {
             return (

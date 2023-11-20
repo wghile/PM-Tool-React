@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp'
 import StartPage from './pages/StartPage'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
+import PhoneBook from './components/PhoneBook'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/home' element={<List setList={setList} list={list}/>} />
+        <Route path='/phonebook' element={<PhoneBook />}/>
         <Route path='/:id/dashboard/*' element={<Dashboard properties={list}/>} />
       </Routes>
     </div>
