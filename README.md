@@ -6,6 +6,18 @@ Property Management Tool to help property owners organize and store all document
 
 Built with React + Vite, JavaScript, Axios, HTML, CSS
 
+## How to Use
+
+- Currently user authentication is not set up, so users can click on the 'PMT' logo at the top of the application to navigate to the start page
+- The start page is where the user can view their properties, edit, and add new properties
+- To see more information on the property the user will click on the property name for the list and the user will be redirected to that property's dashboard. The Dashboard has 3 "pages":
+  1. Dashboard Home Page - simple display of address
+  2. Service Requests - track maintenance requests
+  3. Document Center - store and upload pertinent documents
+- To return to list of properties users can simply click on 'Exit Dashboard'
+- Users can remove a property and all of its information by navigating to the Settings in the Dashboard and click delete to remove that property
+- Also from the Settings drop down menu, users can "log out"
+
 ## Features for Future Enhancements
 
 - User Authentication

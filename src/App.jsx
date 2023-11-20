@@ -7,7 +7,6 @@ import SignUp from './pages/SignUp'
 import StartPage from './pages/StartPage'
 import Dashboard from './pages/Dashboard'
 import AppNav from './components/App-Nav'
-import DocLinks from './components/DocLinks'
 
 function App() {
 

@@ -5,9 +5,17 @@ export default function EditDoc({close, property, docIndex}) {
 
   const id = property._id
   
+  const dateNow = new Date()
+  const formatMin = () => {
+    if(dateNow.getMinutes() >= 0 && dateNow.getMinutes() <= 9){
+      return `0${dateNow.getMinutes()}`
+    }else{
+      return dateNow.getMinutes()
+    }
+  }
+
   const timestamp = () => {
-    const dateNow = new Date()
-    let formattedDate = `${dateNow.getMonth() + 1}/${dateNow.getDate()}/${dateNow.getFullYear()} ${dateNow.getHours()}:${dateNow.getMinutes()}`
+    let formattedDate = `${dateNow.getMonth() + 1}/${dateNow.getDate()}/${dateNow.getFullYear()} ${dateNow.getHours()}:${formatMin()}`
     return formattedDate
   }
 
