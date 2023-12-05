@@ -24,6 +24,7 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - Be able to see a preview of document (still working on this..)
 - Add a refresh button to display documents after changes are made (low) or figure out how to have documents automatically render with updates (high)
 - Finish designing components
+- Add phonebook to store contacts using Map/Dictionaries
 
 ## Challenges
 
@@ -44,3 +45,5 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - React + Axios: https://www.freecodecamp.org/news/how-to-use-axios-with-react/#how-to-make-a-get-request
 
 - Adding an array of objects as one of the model's properties: https://www.dctacademy.com/blog/storing-an-array-of-objects-in-a-mongoose-field-a-guide#:~:text=To%20store%20an%20array%20of,const%20schema%20%3D%20new%20mongoose.
+
+- External link without defined route: https://stackoverflow.com/questions/73829505/how-can-i-route-to-an-external-link-without-appending-to-current-link

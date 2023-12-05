@@ -38,24 +38,21 @@
   background-color: rgb(61, 52, 80);
   font-family: Courier Prime;
   color: azure;
-  overflow: scroll;
 
   display: grid;
-  grid-template-rows: 1fr 200px;
+  grid-template-rows: 3fr 1fr;
   justify-content: center;
   align-items: center;
-  gap: 20px 0px;
+  row-gap: 20px;
 }
 .StartPage > main{
   grid-row: 1/2;
-  width: 60vw;
-  margin-top: 30px;
 
   display: grid;
   grid-template-rows: 50px 80px 1fr;
   justify-items: center;
   align-items: center;
-  gap: 10px 0px;
+  row-gap: 10px;
 }
   .StartPage > main > h1{
     grid-row: 1/2;
@@ -326,7 +323,7 @@
 
   display: grid;
   grid-template-rows: 20px 40px 1fr;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 .Dashboard > header{
   grid-row: 1/2;
@@ -416,7 +413,7 @@
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   column-gap: 22px;
 }
   .Dashboard > nav > .slash{
@@ -435,23 +432,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    padding-top: 40px;
     row-gap: 40px;
   }
   .DashHome > img{
-    flex: 3;
+    flex: 4;
     width: 350px;
     border-radius: 20px;
     border: 2px inset salmon;
     background-color: rgba(248, 168, 159, 0.404);
   }
   .DashHome > h2{
-    flex: 1;
+    flex: 2;
     color: pink;
     font-family: Cutive Mono;
   }
 
   /* Services Component */
+  
+
+
 
   /* Docs Component */
   .Docs{
@@ -542,7 +543,7 @@
     border-top-right-radius: 18px;
     border-top-left-radius: 18px;
   }
-  .DocCard > #img-container > img{
+  .DocCard > #img-container > a > img{
     width: 120px;
     padding-top: 10px;
   }
