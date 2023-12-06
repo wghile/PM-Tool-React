@@ -38,7 +38,7 @@ export default function DocumentCard({doc, property}) {
 
   return (
     <div className='DocCard'>
-        <div id='img-container' onClick={() => openLink()}>
+        <div id='img-container'>
             <a href= {`//${doc.url}`} target='_blank'>
                 <img src='/images/docs.png' alt='Document Stock Photo'/>
             </a>

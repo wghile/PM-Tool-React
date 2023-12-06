@@ -1,6 +1,6 @@
 ## About
 
-Property Management Tool to help property owners organize and store all documents and track maintenance requests. This repo is for the front end.
+Property Management Tool to help property owners manage their properties by storing documents and tracking maintenance requests. This repo is for the front end.
 
 [BackEnd](https://github.com/wghile/PM-Tool-Express)
 
@@ -21,7 +21,6 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 ## Features for Future Enhancements
 
 - User Authentication
-- Be able to see a preview of document (still working on this..)
 - Add a refresh button to display documents after changes are made (low) or figure out how to have documents automatically render with updates (high)
 - Finish designing components
 - Add phonebook to store contacts using Map/Dictionaries
@@ -29,7 +28,7 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 ## Challenges
 
 - Connecting front end to back end
-- Difficulty finding free API to display property information.. would've loved to consume an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house.
+- Difficulty finding free API to display property information.. would've loved to use an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house.
 - Unable to add documents for a property unless I restart node.js. Not sure why this is and need to troubleshoot
 
 ## Resources
