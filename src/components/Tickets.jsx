@@ -1,42 +1,57 @@
-export default function Tickets() {
+export default function Tickets({request, property}) {
 
-  const ticket = document.querySelector('.Tickets')
-
-  const flipTicket = () => {
-    ticket.animate([
-      {transform: "rotateY(180deg)"}
-    ],
-    {
-      duration: 2000,
-      fill: "forwards"
-    })
-  }
+  const index = property.requests.indexOf(request)
+  const tickets = [...document.querySelectorAll('.Tickets')]
+  
+  tickets.forEach((ticket) => {
+    const status = ticket.querySelector('#list-status')
+    if(status.textContent === 'Status: Open'){
+      ticket.style.backgroundColor = 'green'
+    }else if(status.textContent === 'Status: Pending'){
+      ticket.style.backgroundColor = 'yellow'
+    }else if(status.textContent === 'Status: Closed'){
+      ticket.style.backgroundColor = 'red'
+    }else{
+      ticket.style.backgroundColor = 'grey'
+    }
+  })
+  
+  // const singleTicket = document.querySelector('.Tickets')
+  // const flipTicket = () => {
+  //   singleTicket.animate([
+  //     {transform: "rotateY(180deg)"}
+  //   ],
+  //   {
+  //     duration: 2000,
+  //     fill: "forwards"
+  //   })
+  // }
 
   return (
-    <div className='Tickets' onClick={() => {flipTicket()}}>
+    <div className='Tickets'>
       <nav>
         <h1>
-          Ticket ID: <div>4567</div>
+          Ticket ID: <div>{index + 1}</div>
         </h1>
         <h2>
-          Date Notified: <div>12/12/2023</div>
+          Date Notified: <div>{request.date}</div>
         </h2>
       </nav>
       <main>
         <ul>
           <li id='list-status'>
-            Status: Open
+            Status: {request.status}
           </li>
           <li id='list-location'>
-            Location:
+            Location: {request.location}
           </li>
           <li id='list-source'>
-            Source: 
+            Source: {request.source}
           </li>
           <li id='list-description'>
             Description: 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt aspernatur tempora eos illo voluptate expedita similique eum debitis omnis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ducimus in quo, quas eos dicta illum pariatur soluta atque fuga laudantium neque ipsum voluptatum asperiores voluptate aliquam nobis iusto eius tenetur cumque distinctio expedita voluptas! Neque ducimus corporis alias doloribus.
+              {request.description}
             </p>
           </li>
         </ul>

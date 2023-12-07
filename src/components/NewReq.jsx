@@ -31,7 +31,6 @@ export default function newReq({close, property}) {
   const [source, setSource] = useState('')
   const [description, setDescription] = useState('')
 
-  // console.log(property?.requests)
   const newReq = {
     date,
     status, 

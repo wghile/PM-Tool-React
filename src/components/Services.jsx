@@ -4,9 +4,6 @@ import NewReq from './NewReq'
 
 export default function Services({property}) {
 
-  // console.log(prop)
-  // console.log(services)
-
   return (
     <div className='Services'>
       <Popup trigger={<button>New Request</button>} modal nested>
@@ -20,7 +17,11 @@ export default function Services({property}) {
         )}
       </Popup>
       <main id='tickets-container'>
-        <Tickets />
+        {property.requests.map((request) => {
+          return(
+            <Tickets key={request._id} request={request} property={property}/>
+          )
+        })}
       </main>
     </div>
   )
