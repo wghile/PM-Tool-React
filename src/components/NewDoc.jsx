@@ -59,6 +59,9 @@ export default function NewDoc({close, property}) {
         </div>
         <div id='url'>
           URL: <input type='text' value={url} onChange={(evt) => setUrl(evt.target.value)}/>
+          <div style={{fontSize: '13px', lineHeight: '0.4in', textAlign: 'center', color: 'red'}}>
+            Do Not Include <em>https://</em> in url
+          </div>
         </div>
       </form>
       <button onClick={() => {

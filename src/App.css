@@ -541,6 +541,7 @@
     display: flex;
     line-height: 0.3in;
     border-bottom: 2px dashed black;
+    padding: 0px 5px;
   }
     .Tickets > nav > h1{
       flex: 1;
@@ -617,7 +618,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 25px;
 
     color: darkslategray;
     font-family: Courier Prime;
