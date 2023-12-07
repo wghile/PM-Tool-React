@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Courier+Prime:regular,italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular);
+@import url(https://fonts.googleapis.com/css?family=Dhurjati:regular);
 
 *{
   margin: 0px;
@@ -450,7 +451,67 @@
   }
 
   /* Services Component */
-  
+  .Services{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 360px 360px;
+    gap: 10px 20px;
+    height: 60vh;
+    overflow: scroll;
+  }
+
+  /* Tickets Component */
+  .Tickets{
+    font-family: Dhurjati;
+    border: 2px solid black;
+    padding: 10px;
+    width: 80%;
+    justify-self: center;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    row-gap: 5px;
+  }
+  .Tickets > nav{
+    grid-row: 1/2;
+    display: flex;
+    line-height: 0.3in;
+    border-bottom: 2px dashed black;
+  }
+    .Tickets > nav > h1{
+      flex: 1;
+    }
+      .Tickets nav h1 div{
+        font-size: 18px;
+      }
+    .Tickets > nav > h2{
+      flex: 1;
+    }
+        .Tickets nav h2 div {
+          font-size: 18px;
+        }
+  .Tickets main{
+    grid-row: 2/3;
+  }
+  .Tickets main ul{
+    list-style: none;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .Tickets main ul #list-location #list-source #list-status{
+    flex: 1;
+  }
+  .Tickets main ul #list-description{
+    flex: 2;
+  }
+    .Tickets main ul #list-description p{
+      overflow: scroll;
+      height: 120px;
+      padding-left: 10px;
+    }
 
 
 
