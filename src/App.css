@@ -452,13 +452,75 @@
 
   /* Services Component */
   .Services{
-    margin-top: 25px;
+    grid-row: 3/4;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .Services button{
+    font-family: cursive;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: 2px black ridge;
+    border-radius: 10px;
+  }
+
+  .Services button:hover{
+    cursor: pointer;
+  }
+  .Services #tickets-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 360px 360px;
     gap: 10px 20px;
     height: 60vh;
     overflow: scroll;
+  }
+  .modal-Reqs{
+    width: 30vw;
+    height: 75vh;
+  }
+
+  /* New Req Component */
+  .NewReq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    color: darkslategray;
+    font-family: Courier Prime;
+  }
+  .NewReq form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .NewReq form input{
+    font-family: Courier Prime;
+    overflow: scroll;
+  }
+  .NewReq form #description{
+    display: flex;
+    align-items: center;
+  }
+  .NewReq button{
+    color: darkslategray;
+    font-family: Courier Prime;
+    font-size: 16px;
+    height: 35px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px inset darkslategray;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+  }
+  .NewReq button:hover{
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
   }
 
   /* Tickets Component */
@@ -514,7 +576,6 @@
     }
 
 
-
   /* Docs Component */
   .Docs{
     grid-row: 3/4;
@@ -530,7 +591,6 @@
     padding: 5px 10px;
     border: 2px black ridge;
     border-radius: 10px;
-
   }
   .Docs > button:hover{
     cursor: pointer;

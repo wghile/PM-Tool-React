@@ -73,7 +73,7 @@ export default function Dashboard() {
         </nav>
         <Routes>
             <Route path='/' element={<DashHome property={prop}/>} />
-            <Route path='/service' element={<Services />} />
+            <Route path='/service' element={<Services property={prop}/>} />
             <Route path='/docs' element={<Documents docs={prop?.docs} property={prop}/>} />
         </Routes>
     </div>
