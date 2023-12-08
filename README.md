@@ -22,6 +22,9 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 
 - User Authentication
 - Add a refresh button to display documents after changes are made (low) or figure out how to have documents automatically render with updates (high)
+- Add features to Service Requests tab
+  - Filter by status of request
+  - Show updates/comments on back of requests
 - Add phonebook to store contacts using Map/Dictionaries
 
 ## Challenges
