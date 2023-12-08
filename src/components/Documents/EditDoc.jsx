@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateFunction } from '../services/property-api'
+import { updateFunction } from '../../services/property-api'
 
 export default function EditDoc({close, property, docIndex}) {
 

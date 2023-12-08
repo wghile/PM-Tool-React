@@ -4,8 +4,8 @@ import { getProperty } from '../services/property-api'
 import Popup from 'reactjs-popup'
 import DeletePrompt from '../components/DeletePrompt'
 import DashHome from '../components/DashHome'
-import Services from '../components/Services'
-import Documents from '../components/Documents'
+import Services from '../components/Requests/Services'
+import Documents from '../components/Documents/Documents'
 
 export default function Dashboard() {
 

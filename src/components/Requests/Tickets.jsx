@@ -8,9 +8,9 @@ export default function Tickets({request, property}) {
     if(status.textContent === 'Status: Open'){
       ticket.style.backgroundColor = 'green'
     }else if(status.textContent === 'Status: Pending'){
-      ticket.style.backgroundColor = 'yellow'
+      ticket.style.backgroundColor = 'lightyellow'
     }else if(status.textContent === 'Status: Closed'){
-      ticket.style.backgroundColor = 'red'
+      ticket.style.backgroundColor = 'midnightblue'
     }else{
       ticket.style.backgroundColor = 'grey'
     }

@@ -1,5 +1,5 @@
 import Popup from 'reactjs-popup'
-import { updateFunction } from '../services/property-api'
+import { updateFunction } from '../../services/property-api'
 import { useState } from 'react'
 import EditDoc from './EditDoc'
 
