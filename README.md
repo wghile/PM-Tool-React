@@ -31,7 +31,7 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 
 - Connecting front end to back end
 - Difficulty finding free API to display property information.. would've loved to use an API to get image of property, size, property value, etc to display on the dashboard. For now just have property address and stock photo of house.
-- Unable to add documents for a property unless I restart node.js. Not sure why this is and need to troubleshoot
+- Unable to add/edit documents for a property unless I restart server. Not sure why this is and need to troubleshoot
 
 ## Resources
 
