@@ -19,8 +19,7 @@ export default function Dashboard() {
         setProp(response.data)
         }), []
     })
-
-    console.log(prop)
+    
   return (
     <div className='Dashboard'>
         <header>
