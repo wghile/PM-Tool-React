@@ -20,6 +20,7 @@ export default function Dashboard() {
         }), []
     })
 
+    console.log(prop)
   return (
     <div className='Dashboard'>
         <header>
