@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Courier+Prime:regular,italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular);
 @import url(https://fonts.googleapis.com/css?family=Dhurjati:regular);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 
 *{
   margin: 0px;
@@ -313,6 +314,38 @@
   background-color: darkslategrey;
   color: white;
   cursor: pointer;
+}
+
+/* Phonebook */
+.PhoneBook{
+  grid-row: 2/3;
+  background-color: rgb(61, 52, 80);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PhoneBook #book-container{
+  background-color: white;
+  border: 2px inset lightgray;
+  border-radius: 4px;
+  height: 80vh;
+  width: 35vw;
+  padding: 20px;
+  font-family: Playfair Display;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.PhoneBook #book-container h1{
+  flex: 1;
+  letter-spacing: 0.03in;
+}
+.PhoneBook #book-container input{
+  flex: 1;
+  width: 100%;
 }
 
 
