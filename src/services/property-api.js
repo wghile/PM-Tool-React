@@ -2,7 +2,7 @@
     //responses = axios.put/.post/.get/.delete
     //import request function from services file into components
 import axios from 'axios'
-const BASE_URL = 'https://pm-express.onrender.com'
+const BASE_URL = 'https://pm-express.onrender.com/property'
 
 // Show All Properties
 export function getPropertyList(){

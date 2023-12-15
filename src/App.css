@@ -316,8 +316,8 @@
   cursor: pointer;
 }
 
-/* Phonebook */
-.PhoneBook{
+/* Contacts */
+.Contacts{
   grid-row: 2/3;
   background-color: rgb(61, 52, 80);
   
@@ -325,9 +325,9 @@
   justify-content: center;
   align-items: center;
 }
-.PhoneBook #book-container{
+.Contacts #book-container{
   background-color: white;
-  border: 2px inset lightgray;
+  border: 3px inset lightgray;
   border-radius: 4px;
   height: 80vh;
   width: 35vw;
@@ -339,13 +339,30 @@
   align-items: center;
   row-gap: 15px;
 }
-.PhoneBook #book-container h1{
+.Contacts #book-container h1{
   flex: 1;
   letter-spacing: 0.03in;
 }
-.PhoneBook #book-container input{
-  flex: 1;
-  width: 100%;
+.Contacts #book-container input{
+  flex: 0.5;
+  width: 80%;
+  border-radius: 8px;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.Contacts #book-container #contacts-container{
+  flex: 10;
+  width: 90%;
+  margin-top: 20px;
+}
+
+
+/* Contact Item Component */
+.ContactItem{
+  border-bottom: 2px rgb(104, 100, 100) double;
+  height: 60px;
+
+  display: flex;
 }
 
 
