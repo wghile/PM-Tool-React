@@ -24,6 +24,17 @@ export default function Contacts() {
     }
   })
 
+  // Still working on this..
+  const handleChange = (evt) => {
+    console.log(evt.target.value)
+    // console.log(list)
+    const filteredList = list.filter((item) => {
+      item.occupation.toLowerCase().includes(evt.target.value.toLowerCase())
+    })
+    console.log(filteredList)
+    // setList(filteredList)
+  }
+
   return (
     <div className='Contacts'>
       <Popup trigger={<span id='plus-sign'>+</span>} modal nested>
@@ -40,7 +51,7 @@ export default function Contacts() {
           <h1>
             Contacts
           </h1>
-          <input placeholder='Search by Occupation'/>
+          <input placeholder='Search by Speciality' onChange={handleChange}/>
           <div id='contacts-container'>
             {list.map((item) => {
               return(

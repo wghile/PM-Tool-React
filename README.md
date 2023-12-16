@@ -25,6 +25,7 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - Add features to Service Requests tab
   - Filter by status of request
   - Show updates/comments on back of requests
+- Filter contacts by speciality
 
 ## Challenges
 

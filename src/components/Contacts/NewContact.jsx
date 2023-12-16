@@ -16,7 +16,7 @@ export default function NewDoc({close}) {
   }
 
   return (
-    <div className='NewDoc'>
+    <div className='NewDoc NewContact'>
       <h1>
         New Contact
       </h1>
@@ -26,12 +26,9 @@ export default function NewDoc({close}) {
         </div>
         <div id='number'>
           Number: <input type='text' value={number} onChange={(evt) => setNumber(evt.target.value)}/>
-          {/* <div style={{fontSize: '13px', lineHeight: '0.4in', textAlign: 'center', color: 'red'}}>
-            Do Not Include <em>https://</em> in number
-          </div> */}
         </div>
         <div id='occupation'>
-          Occupation/Field: <input type='text' value={occupation} onChange={(evt) => setOccupation(evt.target.value)}/>
+          Speciality: <input type='text' value={occupation} onChange={(evt) => setOccupation(evt.target.value)} placeholder='Plumbing, Flooring, etc'/>
         </div>
         <div id='company'>
           Company: <input type='text' value={company} onChange={(evt) => setCompany(evt.target.value)}/>

@@ -399,6 +399,15 @@
     flex: 2;
   }
 
+/* New Contact Component */
+.modal-Contacts{
+  width: 320px;
+  height: 400px;
+  row-gap: 30px;
+}
+.NewContact form{
+  padding-left: 10px;
+}
 
 /* Dashboard */
 .Dashboard{
