@@ -2,8 +2,8 @@
     //responses = axios.put/.post/.get/.delete
     //import request function from services file into components
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3001/contacts'
-// const BASE_URL = 'https://pm-express.onrender.com/contacts'
+// const BASE_URL = 'http://localhost:3001/contacts'
+const BASE_URL = 'https://pm-express.onrender.com/contacts'
 
 
 // Show All Contacts
