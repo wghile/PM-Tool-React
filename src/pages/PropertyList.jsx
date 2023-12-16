@@ -20,7 +20,7 @@ export default function HomePage({setList, list}) {
           <h1>
               Select Property
           </h1>
-          <Link to='/phonebook'>
+          <Link to='/contacts'>
             <img src='/images/phonebook.png' alt='PhoneBook'/>
           </Link>
         </header>

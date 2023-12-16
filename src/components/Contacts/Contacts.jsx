@@ -11,9 +11,22 @@ export default function Contacts() {
       setList(response.data)
     }), []
   })
+  
+  list.sort((a,b) => {
+    if(a.name < b.name){
+      return -1
+    }else if(a.name > b.name){
+      return 1
+    }else{
+      return 0
+    }
+  })
 
   return (
     <div className='Contacts'>
+        <span id='plus-sign'>
+          +
+        </span>
         <div id='book-container'>
           <h1>
             Contacts

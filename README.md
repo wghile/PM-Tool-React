@@ -9,7 +9,7 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 ## How to Use
 
 - Currently user authentication is not set up, so users can click on the 'PMT' logo at the top of the application to navigate to the start page
-- The start page is where the user can view their properties, edit, and add new properties
+- The start page is where the user can view their properties, edit, and add new properties and see list of contacts
 - To see more information on the property the user will click on the property name for the list and the user will be redirected to that property's dashboard. The Dashboard has 3 "pages":
   1. Dashboard Home Page - simple display of address
   2. Service Requests - track maintenance requests
@@ -25,7 +25,6 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - Add features to Service Requests tab
   - Filter by status of request
   - Show updates/comments on back of requests
-- Add phonebook to store contacts using Map/Dictionaries
 
 ## Challenges
 
@@ -48,3 +47,5 @@ Built with React + Vite, JavaScript, Axios, HTML, CSS
 - Adding an array of objects as one of the model's properties: https://www.dctacademy.com/blog/storing-an-array-of-objects-in-a-mongoose-field-a-guide#:~:text=To%20store%20an%20array%20of,const%20schema%20%3D%20new%20mongoose.
 
 - External link without defined route: https://stackoverflow.com/questions/73829505/how-can-i-route-to-an-external-link-without-appending-to-current-link
+
+- Sorting array by name: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
