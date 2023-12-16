@@ -2,15 +2,17 @@
     //responses = axios.put/.post/.get/.delete
     //import request function from services file into components
 import axios from 'axios'
-const BASE_URL = 'https://pm-express.onrender.com/contacts'
+const BASE_URL = 'http://localhost:3001/contacts'
+// const BASE_URL = 'https://pm-express.onrender.com/contacts'
+
 
 // Show All Contacts
 export function getContactList(){
     return axios.get(BASE_URL)
 }
 
-// Find Property by id
-// export async function getProperty(id){
+// Find Contact by id
+// export async function getContact(id){
 //   try{
 //     const response = await axios({
 //       url: `${BASE_URL}/${id}`,
@@ -22,18 +24,18 @@ export function getContactList(){
 //   }
 // }
 
-// New Property
-// export async function addNewProperty(newProperty) {
-//     try{
-//       await axios({
-//           url: BASE_URL,
-//           method: 'POST',
-//           data: newProperty
-//       })
-//     }catch(error){
-//       console.log(error)
-//     }
-//   }
+// New Contact
+export async function addNewContact(newContact) {
+    try{
+        await axios({
+            url: BASE_URL,
+            method: 'POST',
+            data: newContact
+        })
+    }catch(error){
+      console.log(error)
+    }
+}
 
 // Update Property
 // export async function updateFunction(id, updates){
@@ -48,14 +50,14 @@ export function getContactList(){
 //     }
 //   }
 
-// Remove a Property by id
-// export async function removeProperty(id) {
-//     try{
-//       await axios({
-//         url: `${BASE_URL}/${id}`,
-//         method: 'DELETE'
-//       })
-//     }catch(error){
-//       console.log(error)
-//     }
-//   }
+// Remove a Contact by id
+export async function deleteContact(id){
+    try{
+        await axios({
+            url: `${BASE_URL}/${id}`,
+            method: 'DELETE'
+        })
+    }catch(error){
+      console.log(error)
+    }
+}

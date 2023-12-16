@@ -340,10 +340,10 @@
   row-gap: 15px;
 }
 .Contacts #plus-sign{
-  font-size: 35px;
+  font-size: 30px;
   font-family: Playfair Display;
   position: relative;
-    bottom: 39%;
+    bottom: 38%;
     left: 31%;
 }
 .Contacts #book-container h1{
@@ -380,21 +380,23 @@
   flex-direction: column;
   row-gap: 5px;
 }
-.ContactItem div{
+.ContactItem #line1{
   flex: 1;
   display: flex;
 }
-  .ContactItem div p{
+  .ContactItem #line1 p{
     flex: 1.8;
   }
-  .ContactItem div span{
+  .ContactItem #line1 span{
     flex: 1;
   }
-.ContactItem p{
-  flex: 1;
+.ContactItem #line2 p{
+  display: flex;
+  align-content: center;
+  column-gap: 10px;
 }
-  .ContactItem p span{
-    font-style: italic;
+  .ContactItem #line2 p span{
+    flex: 2;
   }
 
 

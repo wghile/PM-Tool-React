@@ -1,9 +1,15 @@
+import { deleteContact } from '../../services/contact-api'
+
 export default function ContactItem({contact}) {
 
   function company(){
     return(
       <p>
-        <span>{contact.occupation}</span>, {contact.company}
+        <span>
+          <em>{contact.occupation}</em>, {contact.company}
+        </span>
+        <img src='images/trashcan2.jpeg' width={'20px'} onClick={() => {
+          deleteContact(contact._id)}}/>
       </p>
     )
   }
@@ -11,14 +17,18 @@ export default function ContactItem({contact}) {
   function noCompany(){
     return(
       <p>
-        <span>{contact.occupation}</span>
+        <span>
+          <em>{contact.occupation}</em>
+        </span>
+        <img src='images/trashcan2.jpeg' width={'20px'} onClick={() => {
+          deleteContact(contact._id)}}/>
       </p>
     )
   }
 
   return (
     <div className='ContactItem'>
-        <div>
+        <div id='line1'>
           <p>
             {contact.name} 
           </p>
@@ -26,7 +36,9 @@ export default function ContactItem({contact}) {
             {contact.number}
           </span>
         </div>
-        {contact.company ? company() : noCompany()}
+        <div id='line2'>
+          {contact.company ? company() : noCompany()}
+        </div>
     </div>
   )
 }
