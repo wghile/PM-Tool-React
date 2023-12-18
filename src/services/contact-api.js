@@ -11,19 +11,6 @@ export function getContactList(){
     return axios.get(BASE_URL)
 }
 
-// Find Contact by id
-// export async function getContact(id){
-//   try{
-//     const response = await axios({
-//       url: `${BASE_URL}/${id}`,
-//       method: 'GET'
-//     })
-//     return response
-//   }catch(error){
-//     console.log(error)
-//   }
-// }
-
 // New Contact
 export async function addNewContact(newContact) {
     try{
@@ -36,19 +23,6 @@ export async function addNewContact(newContact) {
       console.log(error)
     }
 }
-
-// Update Property
-// export async function updateFunction(id, updates){
-//     try{
-//         await axios({
-//             url: `${BASE_URL}/${id}`,
-//             method: 'PUT',
-//             data: updates
-//         })
-//     }catch(error){
-//       console.log(error)
-//     }
-//   }
 
 // Remove a Contact by id
 export async function deleteContact(id){

@@ -346,6 +346,9 @@
     bottom: 38%;
     left: 31%;
 }
+.Contacts #plus-sign:hover{
+  cursor: pointer;
+}
 .Contacts #book-container h1{
   flex: 1;
   letter-spacing: 0.03in;
