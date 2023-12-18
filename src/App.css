@@ -401,6 +401,9 @@
   .ContactItem #line2 p span{
     flex: 2;
   }
+  .ContactItem #line2 p img:hover{
+    cursor: pointer;
+  }
 
 /* New Contact Component */
 .modal-Contacts{
